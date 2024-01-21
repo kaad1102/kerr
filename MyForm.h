@@ -13,6 +13,7 @@ namespace kerr {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Collections::Generic;
+	using namespace std;
 
 	/// <summary>
 	/// Сводка для MyForm
@@ -121,10 +122,10 @@ namespace kerr {
 	private: System::Windows::Forms::Button^ button47;
 
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox3;
+
+
+
+
 
 
 
@@ -195,10 +196,6 @@ namespace kerr {
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->button47 = (gcnew System::Windows::Forms::Button());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->button44 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -601,10 +598,6 @@ namespace kerr {
 			// 
 			this->panel2->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel2->Controls->Add(this->panel3);
-			this->panel2->Controls->Add(this->textBox4);
-			this->panel2->Controls->Add(this->label7);
-			this->panel2->Controls->Add(this->label6);
-			this->panel2->Controls->Add(this->textBox3);
 			this->panel2->Controls->Add(this->label4);
 			this->panel2->Controls->Add(this->button44);
 			this->panel2->Controls->Add(this->label2);
@@ -635,11 +628,11 @@ namespace kerr {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Perpetua", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(6, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(53, 22);
+			this->label5->Size = System::Drawing::Size(60, 24);
 			this->label5->TabIndex = 1;
 			this->label5->Text = L"label5";
 			// 
@@ -653,41 +646,6 @@ namespace kerr {
 			this->button47->UseVisualStyleBackColor = true;
 			this->button47->Click += gcnew System::EventHandler(this, &MyForm::button47_Click);
 			// 
-			// textBox4
-			// 
-			this->textBox4->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->textBox4->Location = System::Drawing::Point(258, 335);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(79, 20);
-			this->textBox4->TabIndex = 10;
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(255, 319);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(74, 13);
-			this->label7->TabIndex = 9;
-			this->label7->Text = L"Дата выезда";
-			this->label7->Click += gcnew System::EventHandler(this, &MyForm::label7_Click);
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(158, 318);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(72, 13);
-			this->label6->TabIndex = 8;
-			this->label6->Text = L"Дата заезда";
-			// 
-			// textBox3
-			// 
-			this->textBox3->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->textBox3->Location = System::Drawing::Point(161, 335);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(79, 20);
-			this->textBox3->TabIndex = 7;
-			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
@@ -700,21 +658,22 @@ namespace kerr {
 			// 
 			// button44
 			// 
-			this->button44->Location = System::Drawing::Point(369, 320);
+			this->button44->Location = System::Drawing::Point(168, 319);
 			this->button44->Name = L"button44";
 			this->button44->Size = System::Drawing::Size(104, 46);
 			this->button44->TabIndex = 5;
 			this->button44->Text = L"Добавить";
 			this->button44->UseVisualStyleBackColor = true;
+			this->button44->Click += gcnew System::EventHandler(this, &MyForm::button44_Click);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(13, 294);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(90, 13);
+			this->label2->Size = System::Drawing::Size(93, 13);
 			this->label2->TabIndex = 4;
-			this->label2->Text = L"Добавить бронь";
+			this->label2->Text = L"Добавить бронь:";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
 			// 
 			// button43
@@ -738,11 +697,11 @@ namespace kerr {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Perpetua", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(56, 38);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(53, 22);
+			this->label1->Size = System::Drawing::Size(60, 24);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"label1";
 			// 
@@ -870,7 +829,7 @@ namespace kerr {
 			this->Location = System::Drawing::Point(166, 393);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"\'";
+			this->Text = L"RoomView: Pro";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->Click += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->panel2->ResumeLayout(false);
@@ -933,5 +892,20 @@ private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void button44_Click(System::Object^ sender, System::EventArgs^ e) {
+	room^ roomInstance = gcnew room(System::Convert::ToInt32(Num));
+	String^ result = roomInstance->AddGuest(this->textBox2->Text, System::Convert::ToInt32(Num), this);
+	if (result != "") {
+		Button^ tmp = (Button^)sender;
+		for each (Control ^ var in Controls)
+		{
+			if (var->GetType() == tmp->GetType()) {
+				if (var->Text == Num) {
+					var->BackColor = System::Drawing::Color::Red;
+				}
+			}
+		}
+	}
+	}
 };
 }
