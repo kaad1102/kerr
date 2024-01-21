@@ -15,9 +15,6 @@ namespace kerr {
 	using namespace System::Collections::Generic;
 	using namespace std;
 
-	/// <summary>
-	/// Сводка для MyForm
-	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:

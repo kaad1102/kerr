@@ -63,7 +63,7 @@ public:
                             System::Windows::Forms::MessageBox::Show("Íîìåğ çàáğîíèğîâàí!", "Ñîîáùåíèå", System::Windows::Forms::MessageBoxButtons::OK);
                         }
                         else {
-                            System::Windows::Forms::MessageBox::Show("ÑÂÎÑÂÎÑÂÎÑÂÎÑÂÎÑÂÎ", "Îøèáêà!", System::Windows::Forms::MessageBoxButtons::OK, System::Windows::Forms::MessageBoxIcon::Warning);
+                            System::Windows::Forms::MessageBox::Show("Âû íè÷åãî íå ââåëè!", "Îøèáêà!", System::Windows::Forms::MessageBoxButtons::OK, System::Windows::Forms::MessageBoxIcon::Warning);
                         } 
 
                         book->save(L"bd.xls");
